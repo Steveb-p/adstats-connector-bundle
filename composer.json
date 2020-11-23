@@ -1,0 +1,46 @@
+{
+    "name": "steveb-p/adstats-connector-bundle",
+    "description": "Bundle configuration for AdStatsConnector library",
+    "version": "1.0.0",
+    "type": "symfony-bundle",
+    "config": {
+        "sort-packages": true
+    },
+    "authors": [
+        {
+            "name": "Paweł Niedzielski",
+            "email": "pniedzielski@enzode.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "enzode/ad-stats-connector": "^1.0",
+        "symfony/http-kernel": "^5.1",
+        "symfony/dependency-injection": "^5.1",
+        "symfony/config": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Enzode\\AdStatsConnector\\Bundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Enzode\\AdStatsConnector\\Tests\\Bundle\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../AdStatsConnector"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.4",
+        "symfony/phpunit-bridge": "^5.1",
+        "symfony/var-dumper": "^5.1"
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml"
+    }
+}
